@@ -30,6 +30,12 @@ namespace CareerCloud.UnitTests.Utils
             return propInfo;
         }
 
+        public static bool GetPropertyType(Type t, Type propType, string propName)
+        {
+            PropertyInfo propinfo = GetProperty(t, propName);
+            return propinfo.PropertyType == propType;
+        }
+
         public static bool HasTable(Type type, string name)
         {
             var tableAttrib = (TableAttribute)type.GetCustomAttribute(typeof(TableAttribute));
