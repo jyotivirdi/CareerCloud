@@ -247,7 +247,7 @@ namespace CareerCloud.UnitTests.Assingment1Tests
 
             Assert.IsTrue(GetChar.ImplementsInterface(poco, "IPoco"));
 
-            Assert.IsTrue(GetChar.HasTable(poco, "Company_Job_Education"));
+            Assert.IsTrue(GetChar.HasTable(poco, "Company_Job_Educations"));
             Assert.IsTrue(GetChar.HasKey(GetChar.GetProperty(poco, "Id")));
             Assert.IsTrue(GetChar.GetPropertyType(poco, typeof(Guid), "Id"));
             Assert.IsTrue(GetChar.HasColumn(GetChar.GetProperty(poco, "TimeStamp"), "Time_Stamp"));
