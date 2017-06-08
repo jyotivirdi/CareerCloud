@@ -141,11 +141,14 @@ namespace CareerCloud.UnitTests.Assingment1Tests
             Assert.IsTrue(GetChar.HasTable(poco, "Applicant_Resumes"));
             Assert.IsTrue(GetChar.HasKey(GetChar.GetProperty(poco, "Id")));
             Assert.IsTrue(GetChar.GetPropertyType(poco, typeof(Guid), "Id"));
-
             Assert.IsNotNull(GetChar.GetProperty(poco, "Applicant"));
             Assert.IsTrue(GetChar.GetPropertyType(poco, typeof(Guid), "Applicant"));
             Assert.IsNotNull(GetChar.GetProperty(poco, "Resume"));
             Assert.IsTrue(GetChar.GetPropertyType(poco, typeof(string), "Resume"));
+            Assert.IsNotNull(GetChar.GetProperty(poco, "LastUpdated"));
+            Assert.IsTrue(GetChar.HasColumn(GetChar.GetProperty(poco, "LastUpdated"), "Last_Updated"));
+            Assert.IsTrue(GetChar.GetPropertyType(poco, typeof(DateTime?), "LastUpdated"));
+
 
         }
 
