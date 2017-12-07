@@ -8,7 +8,7 @@ using System.Reflection;
 namespace CareerCloud.UnitTests.Utils
 {
 
-    public static class GetChar 
+    public static class GetCharacteristics 
     {
         public static Type GetType(Type[] types, string name)
         {
